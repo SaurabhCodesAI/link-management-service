@@ -1,0 +1,266 @@
+# Engineering Guide
+
+This document defines the engineering standards, architecture, and development conventions used throughout this repository.
+
+Its purpose is to ensure every feature follows the same engineering principles as the project evolves.
+
+## Engineering Principles
+
+Always prioritize:
+
+- simplicity
+- readability
+- maintainability
+- consistency
+- separation of concerns
+
+Avoid:
+
+- premature optimization
+- unnecessary abstractions
+- duplicated logic
+- tightly coupled components
+- overengineering
+
+Every engineering decision should make the codebase easier to understand and maintain.
+
+## Layered Architecture
+
+The application follows a layered architecture.
+
+Every request should move through clearly defined layers:
+
+```text
+Client
+-> API Layer
+-> Validation
+-> Business Logic
+-> Persistence
+-> Response
+```
+
+Each layer has one responsibility.
+
+No layer should perform another layer's job.
+
+## Folder Responsibilities
+
+### `app/api`
+
+Purpose: handle HTTP requests and responses.
+
+Responsibilities:
+
+- define routes
+- receive requests
+- coordinate validation
+- call services
+- return responses
+
+Should not contain:
+
+- business logic
+- database queries
+- caching logic
+
+### `app/services`
+
+Purpose: implement business rules.
+
+Responsibilities:
+
+- application logic
+- request processing
+- coordination between layers
+- business decisions
+
+Should not contain:
+
+- HTTP concerns
+- response formatting
+
+### `app/schemas`
+
+Purpose: validate and serialize data.
+
+Responsibilities:
+
+- request models
+- response models
+- validation
+
+Should not contain:
+
+- business logic
+- persistence logic
+
+Schemas and database models should remain separate.
+
+### `app/models`
+
+Purpose: represent persistent data.
+
+Responsibilities:
+
+- database models
+- table definitions
+- relationships
+
+Should not contain:
+
+- API validation
+- business rules
+
+### `app/db`
+
+Purpose: persistence layer.
+
+Responsibilities:
+
+- database configuration
+- sessions
+- storage
+- repositories when introduced
+
+### `app/core`
+
+Purpose: application configuration and shared infrastructure.
+
+Examples:
+
+- settings
+- logging
+- security
+- constants
+- shared exceptions
+
+### `app/utils`
+
+Purpose: small reusable helper functions.
+
+Examples:
+
+- encoding
+- formatting
+- hashing
+
+Do not place business logic inside `utils`.
+
+## Request Lifecycle
+
+Every request should follow the same flow:
+
+```text
+Client
+-> Route
+-> Validation
+-> Service
+-> Persistence
+-> Response
+```
+
+Understanding this lifecycle is more important than memorizing framework syntax.
+
+## Separation of Concerns
+
+Every layer should solve exactly one problem.
+
+If a function performs multiple unrelated responsibilities, consider refactoring.
+
+Business logic should remain independent from HTTP implementation whenever practical.
+
+## Naming Conventions
+
+Variables should use descriptive names.
+
+Functions should use clear verb-based names when appropriate:
+
+- `create_link()`
+- `generate_code()`
+- `find_link()`
+
+Classes should use `PascalCase`.
+
+Files should use `snake_case`.
+
+Constants should use `UPPER_CASE`.
+
+Avoid abbreviations unless they are widely recognized.
+
+## Code Quality
+
+Prefer:
+
+- explicit code
+- readable code
+- meaningful names
+- small focused functions
+
+Avoid:
+
+- deeply nested logic
+- large functions
+- duplicated code
+- unnecessary abstractions
+
+Code should optimize for readability before cleverness.
+
+## Git Workflow
+
+Each feature should follow the same workflow:
+
+1. Understand
+2. Design
+3. Implement
+4. Test
+5. Review
+6. Commit
+
+Commits should represent logical units of work.
+
+Prefer small commits over large commits.
+
+## Testing Philosophy
+
+Testing is part of development.
+
+It is not a final step.
+
+Features should become testable as they are completed.
+
+Tests should verify behavior rather than implementation details.
+
+## Documentation Philosophy
+
+Architecture decisions should be documented.
+
+Code should explain how.
+
+Documentation should explain why.
+
+Avoid documenting obvious implementation details.
+
+## Future Evolution
+
+The architecture should evolve only when new requirements justify additional complexity.
+
+Technologies should be introduced because they solve an existing engineering problem.
+
+Do not introduce infrastructure simply because it is commonly used.
+
+Every layer added to the architecture should have a clear purpose.
+
+## Engineering Standard
+
+A feature is considered complete only when:
+
+- it works correctly
+- the implementation is understandable
+- responsibilities remain separated
+- naming is clear
+- architecture remains consistent
+- the code can be explained during an interview
+
+Completing functionality is only one part of software engineering.
+
+Maintaining a clean architecture is equally important.

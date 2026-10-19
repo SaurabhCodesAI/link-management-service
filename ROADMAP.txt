@@ -1,0 +1,203 @@
+# Backend Engineering Roadmap
+
+This roadmap defines the learning journey for this project.
+
+The objective is not to complete tasks as quickly as possible.
+
+The objective is to master one engineering concept before introducing the next.
+
+Each milestone should introduce only a small number of new concepts.
+
+Knowledge should accumulate gradually.
+
+## Learning Rules
+
+Never introduce more than one major engineering concept at a time.
+
+New knowledge should be immediately reinforced through implementation.
+
+Previously learned concepts should continue appearing throughout future milestones.
+
+Every completed milestone should leave me capable of explaining the engineering decisions behind it.
+
+## Milestone 0: Repository Foundation
+
+Objective: understand how a backend project is organized.
+
+Learn:
+
+- project structure
+- folder responsibilities
+- request lifecycle
+- development workflow
+- Git workflow
+
+Outcome: I understand how the repository is organized and why each folder exists.
+
+Status: Not started
+
+## Milestone 1: First Running Backend
+
+Objective: build the smallest working FastAPI application.
+
+Learn:
+
+- FastAPI
+- application entry point
+- APIRouter
+- running a development server
+
+Outcome: The application starts successfully and exposes its first endpoint.
+
+Status: Not started
+
+## Milestone 2: Request Validation
+
+Objective: accept user input safely.
+
+Learn:
+
+- HTTP POST
+- JSON request body
+- Pydantic
+- validation
+
+Outcome: The application validates incoming requests before processing them.
+
+Status: Not started
+
+## Milestone 3: Business Logic
+
+Objective: separate application logic from HTTP routes.
+
+Learn:
+
+- service layer
+- separation of concerns
+- code organization
+
+Outcome: Routes remain thin while services contain business logic.
+
+Status: Not started
+
+## Milestone 4: In-Memory Persistence
+
+Objective: store and retrieve data.
+
+Learn:
+
+- dictionaries
+- persistence during runtime
+- lookup flow
+
+Outcome: Links can be created and resolved without a database.
+
+Status: Not started
+
+## Milestone 5: Database Fundamentals
+
+Objective: replace temporary storage with persistent storage.
+
+Learn:
+
+- PostgreSQL
+- SQLAlchemy
+- sessions
+- ORM models
+
+Outcome: Data survives application restarts.
+
+Status: Not started
+
+## Milestone 6: Authentication
+
+Objective: associate data with users.
+
+Learn:
+
+- authentication
+- authorization
+- JWT
+- protected endpoints
+
+Outcome: Users can securely manage their own links.
+
+Status: Not started
+
+## Milestone 7: Performance
+
+Objective: reduce unnecessary work.
+
+Learn:
+
+- caching
+- Redis
+- cache invalidation
+
+Outcome: Frequently accessed links are served more efficiently.
+
+Status: Not started
+
+## Milestone 8: Background Processing
+
+Objective: move expensive work outside the request lifecycle.
+
+Learn:
+
+- Celery
+- workers
+- asynchronous processing
+- retry mechanisms
+
+Outcome: Analytics and long-running tasks no longer block API responses.
+
+Status: Not started
+
+## Milestone 9: Production Readiness
+
+Objective: prepare the application for deployment.
+
+Learn:
+
+- logging
+- error handling
+- health checks
+- environment variables
+- Docker
+
+Outcome: The application behaves like a production backend service.
+
+Status: Not started
+
+## Milestone 10: Software Engineering
+
+Objective: learn professional engineering workflow.
+
+Learn:
+
+- testing
+- GitHub Actions
+- CI/CD
+- documentation
+- code review
+
+Outcome: The project follows professional engineering practices.
+
+Status: Not started
+
+## Final Milestone: Independent Engineering
+
+Objective: demonstrate complete ownership.
+
+Outcome: I can independently:
+
+- design a backend service
+- organize a repository
+- implement features
+- debug issues
+- review code
+- explain architecture
+- discuss engineering trade-offs
+- build similar projects without tutorials
+
+Status: Not started

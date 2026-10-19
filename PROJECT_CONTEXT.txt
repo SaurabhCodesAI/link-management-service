@@ -1,0 +1,133 @@
+# Link Management Service
+
+## Project Overview
+
+This repository contains a production-inspired backend service built for learning backend software engineering.
+
+Although the application manages shareable links, the project is not intended to become the world's most feature-rich link shortener.
+
+The application is the medium through which backend engineering concepts are learned.
+
+The real objective is to become capable of independently building similar backend services.
+
+## Project Mission
+
+Build a production-inspired backend service while learning professional software engineering practices used in modern technology companies.
+
+The project should gradually evolve from a simple in-memory application into a production-ready backend service through incremental architectural improvements.
+
+Every feature should teach an engineering concept.
+
+Every engineering concept should become reusable knowledge.
+
+## Learning Objectives
+
+By completing this project I should understand:
+
+- backend request lifecycle
+- REST API design
+- data validation
+- business logic separation
+- persistence
+- database design
+- caching
+- background processing
+- authentication
+- testing
+- logging
+- containerization
+- CI/CD
+- deployment
+- software architecture
+- backend debugging
+- Git workflow
+- engineering documentation
+
+The goal is to understand not only how these technologies work, but why they exist and when they should be used.
+
+## Success Criteria
+
+The project is considered successful when I can:
+
+- build similar backend services without tutorials
+- explain every architectural decision
+- debug backend systems confidently
+- extend the application without breaking its architecture
+- discuss design decisions during software engineering interviews
+- recognize the same engineering patterns in other frameworks and languages
+
+The final application is only one outcome.
+
+The primary outcome is becoming a backend engineer.
+
+## Scope
+
+This project intentionally focuses on backend engineering fundamentals before distributed systems.
+
+The architecture should evolve naturally.
+
+Features and technologies should only be introduced when they solve an existing problem.
+
+Avoid introducing complexity before it becomes necessary.
+
+## Engineering Philosophy
+
+Every engineering decision should answer:
+
+- What problem does this solve?
+- Why is it needed now?
+- What alternatives exist?
+- What trade-offs does it introduce?
+
+If these questions cannot be answered, the feature or technology should not yet be added.
+
+## Learning Philosophy
+
+This repository is built using progressive learning.
+
+New concepts should be introduced only when required.
+
+Previously learned concepts should be reinforced through implementation.
+
+Knowledge should accumulate gradually rather than being introduced all at once.
+
+The project should always prioritize understanding over implementation speed.
+
+## Project Evolution
+
+The application will evolve through multiple stages.
+
+Stage 1: working backend foundations.
+
+Stage 2: persistent storage.
+
+Stage 3: performance improvements.
+
+Stage 4: background processing.
+
+Stage 5: production readiness.
+
+Each stage introduces only the concepts required for that stage.
+
+## Non-Goals
+
+This project is intentionally not focused on:
+
+- microservices
+- Kubernetes
+- distributed databases
+- high availability
+- cloud infrastructure
+- premature optimization
+
+These topics are valuable but outside the scope of the current learning objectives.
+
+## Repository Philosophy
+
+Every file, folder, and feature should exist for a reason.
+
+Architecture should remain simple.
+
+Complexity should only be introduced when it solves an existing engineering problem.
+
+The repository should resemble how a small professional backend service naturally evolves over time rather than how a tutorial is structured.

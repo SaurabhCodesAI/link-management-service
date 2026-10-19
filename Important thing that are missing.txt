@@ -1,0 +1,100 @@
+
+WebSockets / real-time systems — appears in some specialized backend jobs.
+Concept	In your projects?	Where / what it means
+Async programming	✅	Project 2 explicitly covers asynchronous/background processing, Celery and workers.
+API documentation	🟡 Not explicitly	FastAPI gives you OpenAPI/Swagger automatically, but your roadmap doesn't explicitly say you'll learn to design/maintain API documentation.
+Postman / API testing	🟡 Not explicitly	Your testing milestone can cover API tests, but Postman itself isn't specified. curl/Swagger can serve a similar purpose.
+Linux / CLI	🟡 Not explicitly	Docker/deployment will expose you to Linux concepts, but your roadmap doesn't explicitly teach Linux administration/CLI.
+Database indexing / query optimization	🟡 Not explicitly	PostgreSQL + SQLAlchemy gives the foundation, but indexing, EXPLAIN, query plans, and optimization aren't currently listed.
+Third-party APIs / webhooks	❌	Not currently part of either project.
+Cloud deployment	🟡 Not explicitly	Milestone 9 says production readiness and Docker, but that does not automatically mean AWS/GCP/Azure deployment.
+AWS / GCP / Azure	❌	Not in the roadmap.
+OAuth / OIDC	❌	Your authentication milestone is JWT-based; OAuth/OIDC is a separate concept.
+
+
+2. Strong Python / OOP fundamentals
+
+Employers repeatedly ask for strong Python fundamentals and often specifically mention OOP.
+
+Your project will improve Python enormously, but I'd still separately make sure you understand:
+
+classes
+inheritance
+composition
+interfaces/abstraction
+exceptions
+iterators/generators
+decorators
+context managers
+typing
+modules/packages
+
+Not necessarily as another project—just as programming fundamentals.
+
+3. Deep SQL and database design
+
+Your PostgreSQL milestone covers the foundation, but postings repeatedly ask for more than "I know PostgreSQL."
+
+They mention things such as:
+
+schema/data modelling
+relationships
+joins
+efficient queries
+query optimization
+database design
+sometimes NoSQL knowledge
+
+I'd add indexes, EXPLAIN, transactions, constraints and query optimization to your PostgreSQL learning.
+
+4. Linux + basic networking
+
+Linux comes up in infrastructure-oriented backend roles, and HTTP/networking/DNS/TLS appear as useful backend knowledge. One current FastAPI internship explicitly calls out Linux and optionally HTTP, networking, DNS and TLS.
+
+You already said you'll learn Linux separately, which is exactly what I'd do.
+
+You don't need to become a Linux administrator. You need to be comfortable operating a backend environment.
+
+5. Cloud + actual deployment
+
+This comes up often enough that I'd definitely add it.
+
+The sampled postings repeatedly mention AWS/GCP/Azure and deployment/cloud exposure, with some making cloud a requirement and others treating it as a bonus.
+
+You already said you'll learn this separately and then deploy your projects.
+
+Good plan.
+
+And you only need one cloud properly at first.
+
+6. Third-party API integration
+
+This is more common than you might think.
+
+Current postings explicitly mention integrating things such as payment, WhatsApp, email, GitHub and other external services.
+
+Your current roadmap doesn't explicitly include this.
+
+I'd add one or two real integrations to an existing project rather than creating another project.
+
+7. API documentation + API testing
+
+These appear in actual roles too.
+
+For example, one FastAPI internship explicitly asks for designing, testing and documenting REST APIs, while another mentions Postman as a bonus.
+
+Your FastAPI application already gives you OpenAPI/Swagger automatically, so you're closer here than you might think.
+
+You mainly need to consciously learn:
+
+API design → OpenAPI/Swagger → curl/Postman → integration tests.
+
+8. OAuth 2.0 / OIDC
+
+This appears, but not nearly as universally as JWT/basic auth.
+
+One current FastAPI internship explicitly requires OAuth 2.0 and JWT, while other roles only mention general authentication/authorization.
+
+Your JWT authentication milestone gives you a useful foundation, but OAuth/OIDC would be a separate addition.
+
+I'd put this in the "learn after the core" bucket, not the "blocking you" bucket.
