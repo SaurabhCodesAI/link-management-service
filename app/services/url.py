@@ -1,20 +1,20 @@
 from app.schemas.url import UrlCreate, UrlResponse
 from app.db.storage import find_by_alias, save_link
 from app.utils.helper import generate_identifier
-def create_link(data: UrlCreate, base_url: str) -> UrlResponse:
+def create_link(data: UrlCreate, base_url: str, session) -> UrlResponse:
     if data.alias is not None:
-        existing = find_by_alias(data.alias)
+        existing = find_by_alias(data.alias, session)
         if existing is not None:
             raise ValueError("alias already exists")
         final_alias = data.alias
     else:
         candidate = generate_identifier()
-        existing = find_by_alias(candidate)
+        existing = find_by_alias(candidate, session)
         while existing is not None:
             candidate = generate_identifier()
-            existing = find_by_alias(candidate)
+            existing = find_by_alias(candidate, session)
         final_alias = candidate
-    save_link(final_alias, data.target_url)
+    save_link(final_alias, data.target_url, session)
     shortened_url = base_url + "/" + final_alias
     return UrlResponse(
         target_url = data.target_url,
