@@ -21,3 +21,10 @@ def create_link(data: UrlCreate, base_url: str, session) -> UrlResponse:
         alias = final_alias,
         shortened_url = shortened_url,
     )
+
+def resolve_link(alias, session):
+    result = find_by_alias(alias, session)
+
+    if result is None:
+        raise ValueError("alias not found")
+    return result.target_url
