@@ -1,5 +1,7 @@
 from app.models.url import Link
 from sqlalchemy.exc import IntegrityError
+from psycopg2.errors import UniqueViolation
+
 def find_by_alias(alias, session):
     return session.get(Link, alias)
 
@@ -8,6 +10,8 @@ def save_link(alias, target_url, session):
     session.add(new_link)
     try:
         session.commit()
-    except IntegrityError:
+    except IntegrityError as error:
         session.rollback()
-        raise ValueError("alias already exists")
+        if isinstance(error.orig, UniqueViolation):
+            raise ValueError("alias already exists")
+        raise
